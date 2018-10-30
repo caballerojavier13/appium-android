@@ -32,5 +32,7 @@ RUN apt-get -y install nodejs
 
 RUN npm install appium
 
+RUN /opt/android-sdk-linux/tools/bin/avdmanager -v create avd --force --name testAVD --abi google_apis_playstore/x86 --package 'system-images;android-26;google_apis_playstore;x86' --device 'Nexus 5X'
+
 EXPOSE 4723
 CMD appium
