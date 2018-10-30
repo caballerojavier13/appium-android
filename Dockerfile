@@ -9,10 +9,10 @@ RUN apt-get update
 RUN apt-get install -y wget
 
 # install Android SDK dependencies
-RUN apt-get install -y openjdk-8-jdk lib32z1 lib32ncurses5 lib32ncurses5 lib32stdc++6 g++-multilib
+RUN apt-get install -y openjdk-8-jdk lib32z1 lib32ncurses5 lib32ncurses5 lib32stdc++6 g++-multilib zip unzip
     
 # Main Android SDK
-RUN wget -qO- "https://dl.google.com/android/repository/platform-26_r02.zip" | tar -zxv -C /opt/
+RUN wget -qO- "https://dl.google.com/android/repository/platform-26_r02.zip" | unzip /opt/
 RUN echo y | /opt/android-sdk-linux/tools/android update sdk --all --filter platform-tools,build-tools-20.0.0 --no-ui --force
 
 ENV ANDROID_HOME /opt/android-sdk-linux
