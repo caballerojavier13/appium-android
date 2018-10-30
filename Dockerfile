@@ -24,7 +24,11 @@ RUN /opt/android-sdk-linux/tools/bin/sdkmanager --update
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
-RUN apt-get -y install software-properties-common nodejs npm
+RUN apt-get -y install software-properties-common build-essential
+RUN curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+RUN bash nodesource_setup.sh
+RUN rm nodesource_setup.sh
+RUN apt-get install nodejs
 
 RUN npm install appium
 
