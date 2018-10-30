@@ -28,7 +28,7 @@ RUN apt-get -y install software-properties-common build-essential curl
 RUN curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh
 RUN rm nodesource_setup.sh
-RUN apt-get install nodejs
+RUN apt-get -y install nodejs
 
 RUN npm install appium
 
