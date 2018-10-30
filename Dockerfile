@@ -24,7 +24,7 @@ RUN /opt/android-sdk-linux/tools/bin/sdkmanager --update
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
-RUN apt-get -y install software-properties-common nodejs
+RUN apt-get -y install software-properties-common nodejs npm
 
 RUN mkdir /opt/appium
 RUN useradd -m -s /bin/bash appium
