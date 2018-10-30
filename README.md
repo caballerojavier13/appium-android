@@ -1,4 +1,4 @@
-appium-android
+Appium - Android
 ==============
 
 Appium Server setup for automated android testing using real devices
@@ -9,7 +9,7 @@ docker run --privileged -v /dev/bus/usb:/dev/bus/usb -i -p 4723:4723 aluedeke/ap
 
 contains the following software:  
 
-ubuntu 14.04  
+ubuntu 16.04  
 openjdk 7  
 nodejs  
 appium server  
