@@ -3,13 +3,13 @@
 ############################################################
 
 FROM ubuntu:16.04
-MAINTAINER Andreas Lüdeke
+MAINTAINER Javier Hernán Caballero García
 
 RUN apt-get update
 RUN apt-get install -y wget
 
 # install Android SDK dependencies
-RUN apt-get install -y openjdk-7-jre-headless lib32z1 lib32ncurses5 lib32bz2-1.0 g++-multilib
+RUN apt-get install -y openjdk-8-jdk lib32z1 lib32ncurses5 lib32bz2-1.0 g++-multilib
     
 # Main Android SDK
 RUN wget -qO- "http://dl.google.com/android/android-sdk_r26.0.2-linux.tgz" | tar -zxv -C /opt/
