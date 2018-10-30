@@ -24,10 +24,7 @@ RUN /opt/android-sdk-linux/tools/bin/sdkmanager --update
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
-RUN apt-get -y install software-properties-common
-RUN add-apt-repository ppa:chris-lea/node.js
-RUN apt-get update
-RUN apt-get -y install nodejs
+RUN apt-get -y install software-properties-common nodejs
 
 RUN mkdir /opt/appium
 RUN useradd -m -s /bin/bash appium
