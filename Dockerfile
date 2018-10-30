@@ -13,7 +13,7 @@ RUN apt-get install -y openjdk-8-jdk lib32z1 lib32ncurses5 lib32ncurses5 lib32st
     
 # Main Android SDK
 RUN wget -qO- "https://dl.google.com/android/repository/platform-26_r02.zip"
-RUN unzip platform-26_r02.zip  /opt/
+RUN unzip platform-26_r02  /opt/
 RUN rm platform-26_r02.zip
 RUN echo y | /opt/android-sdk-linux/tools/android update sdk --all --filter platform-tools,build-tools-20.0.0 --no-ui --force
 
