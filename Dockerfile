@@ -12,7 +12,7 @@ RUN apt-get install -y wget
 RUN apt-get install -y openjdk-8-jdk lib32z1 lib32ncurses5 lib32ncurses5 lib32stdc++6 g++-multilib zip unzip
     
 # Main Android SDK
-RUN cd /opt
+WORKDIR /opt
 RUN wget -qO- "https://dl.google.com/android/repository/platform-26_r02.zip"
 RUN ls -l
 RUN unzip platform-26_r02.zip
