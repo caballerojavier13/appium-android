@@ -19,7 +19,7 @@ RUN unzip -q sdk-tools-linux-4333796.zip -d android-sdk-linux
 RUN rm sdk-tools-linux-4333796.zip
 RUN unzip -q platform-26_r02.zip
 RUN rm platform-26_r02.zip
-RUN ls tools -l
+
 RUN echo y | /opt/android-sdk-linux/tools/android update sdk --all --filter platform-tools,build-tools-20.0.0 --no-ui --force
 
 ENV ANDROID_HOME /opt/android-sdk-linux
