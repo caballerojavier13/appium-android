@@ -34,7 +34,11 @@ RUN npm install appium
 
 RUN yes | /opt/android-sdk-linux/tools/bin/sdkmanager --licenses
 
+RUN touch  /root/.android/repositories.cfg
+
 RUN /opt/android-sdk-linux/tools/bin/sdkmanager "platforms;android-26"
+
+RUN /opt/android-sdk-linux/tools/bin/sdkmanager "system-images;android-26;google_apis_playstore;x86"
 
 RUN /opt/android-sdk-linux/tools/bin/avdmanager -v create avd --force --name testAVD --abi google_apis_playstore/x86 --package 'system-images;android-26;google_apis_playstore;x86' --device 'Nexus 5X'
 
