@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get install -y wget
 
 # install Android SDK dependencies
-RUN apt-get install -y openjdk-8-jdk lib32z1 lib32ncurses5 lib32bz2-1.0 g++-multilib
+RUN apt-get install -y openjdk-8-jdk lib32z1 lib32ncurses5 lib32ncurses5 lib32stdc++6 g++-multilib
     
 # Main Android SDK
 RUN wget -qO- "http://dl.google.com/android/android-sdk_r26.0.2-linux.tgz" | tar -zxv -C /opt/
