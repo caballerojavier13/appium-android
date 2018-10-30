@@ -26,14 +26,7 @@ ENV ANDROID_HOME /opt/android-sdk-linux
 
 RUN apt-get -y install software-properties-common nodejs npm
 
-RUN mkdir /opt/appium
-RUN useradd -m -s /bin/bash appium
-RUN chown -R appium:appium /opt/appium
-
-USER appium
-ENV HOME /home/appium
-
-RUN cd /opt/appium && npm install appium
+RUN npm install appium
 
 EXPOSE 4723
-CMD /opt/appium/node_modules/appium/bin/appium.js
+CMD appium
